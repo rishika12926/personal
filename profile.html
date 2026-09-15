@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Rishika Reddy — Salesforce Application Developer and Salesforce Administrator/Developer.">
+<title>Rishika Reddy | Salesforce Professional</title>
+<style>
+:root{
+  --navy:#032d60; --blue:#0176d3; --sky:#eef7ff; --ink:#16325c;
+  --text:#3e4e63; --muted:#6b7280; --line:#d8e2ee; --white:#fff;
+  --shadow:0 18px 50px rgba(3,45,96,.10); --radius:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--text);background:#f7faff;line-height:1.6;
+}
+a{color:inherit;text-decoration:none}
+.nav{
+  position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);
+  backdrop-filter:blur(14px);border-bottom:1px solid rgba(216,226,238,.8)
+}
+.nav-inner{max-width:1120px;margin:auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:800;color:var(--navy);letter-spacing:-.03em;font-size:20px}
+.brand span{color:var(--blue)}
+.nav-links{display:flex;gap:25px;font-size:14px;font-weight:650;color:#53657b}
+.nav-links a:hover{color:var(--blue)}
+.hero{
+  position:relative;overflow:hidden;background:
+  radial-gradient(circle at 85% 15%,rgba(1,118,211,.17),transparent 28%),
+  radial-gradient(circle at 10% 90%,rgba(3,45,96,.08),transparent 30%),
+  linear-gradient(135deg,#fff 0%,#f2f8ff 100%);
+}
+.hero-inner{max-width:1120px;margin:auto;padding:90px 24px 82px;display:grid;grid-template-columns:1.45fr .75fr;gap:70px;align-items:center}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;color:var(--blue);font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.12em}
+.eyebrow:before{content:"";width:28px;height:2px;background:var(--blue)}
+h1{font-size:clamp(44px,6vw,72px);line-height:1.02;letter-spacing:-.055em;color:var(--navy);margin:18px 0 22px}
+.hero h1 span{color:var(--blue)}
+.hero-copy{font-size:19px;max-width:680px;color:#52657d;margin-bottom:30px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:12px 18px;border-radius:12px;font-weight:750;font-size:14px;transition:.2s}
+.btn-primary{background:var(--blue);color:white;box-shadow:0 8px 20px rgba(1,118,211,.22)}
+.btn-primary:hover{transform:translateY(-2px);background:#0b68b2}
+.btn-secondary{background:white;color:var(--navy);border:1px solid var(--line)}
+.btn-secondary:hover{border-color:#a9bfd5;transform:translateY(-2px)}
+.profile-card{
+  background:white;border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:var(--shadow);
+  position:relative;
+}
+.avatar{width:76px;height:76px;border-radius:22px;background:linear-gradient(145deg,var(--navy),var(--blue));display:grid;place-items:center;color:white;font-size:28px;font-weight:850;margin-bottom:22px}
+.profile-card h3{margin:0;color:var(--navy);font-size:21px}
+.profile-card p{margin:7px 0 20px;color:var(--muted);font-size:14px}
+.badges{display:flex;flex-wrap:wrap;gap:8px}
+.badge{background:var(--sky);border:1px solid #cfe5f7;color:var(--navy);padding:7px 10px;border-radius:999px;font-size:12px;font-weight:750}
+section{max-width:1120px;margin:auto;padding:82px 24px}
+.section-label{font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
+h2{font-size:38px;line-height:1.1;letter-spacing:-.04em;color:var(--navy);margin:0 0 14px}
+.section-intro{max-width:690px;color:#66768a;margin:0 0 36px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:0 8px 28px rgba(3,45,96,.05)}
+.card h3{color:var(--navy);margin:0 0 12px;font-size:19px}
+.card p{margin:0;color:#596b80}
+.skills{display:flex;flex-wrap:wrap;gap:9px}
+.skill{padding:9px 13px;border:1px solid #d7e5f2;border-radius:10px;background:#fbfdff;color:#234a70;font-size:13px;font-weight:700}
+.timeline{position:relative;margin-top:34px}
+.timeline:before{content:"";position:absolute;left:9px;top:10px;bottom:10px;width:2px;background:#d7e5f2}
+.job{position:relative;padding-left:42px;margin-bottom:34px}
+.dot{position:absolute;left:0;top:8px;width:20px;height:20px;border-radius:50%;background:white;border:5px solid var(--blue);box-shadow:0 0 0 4px #e8f4ff}
+.job-top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}
+.job h3{margin:0;color:var(--navy);font-size:19px}
+.company{font-weight:750;color:var(--blue);margin-top:3px}
+.date{font-size:12px;font-weight:750;color:#7a8796;background:#eef3f8;border-radius:999px;padding:6px 10px;white-space:nowrap}
+.job p{margin:10px 0 0;color:#637388}
+.edu-grid,.cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.edu h3,.cert h3{margin-bottom:5px}
+.meta{font-size:13px;color:#778597}
+.cert-grid{grid-template-columns:repeat(3,1fr)}
+.cert{min-height:120px}
+.cert-icon{width:34px;height:34px;border-radius:10px;background:#eaf5ff;color:var(--blue);display:grid;place-items:center;font-weight:900;margin-bottom:14px}
+.contact{
+  background:var(--navy);color:white;max-width:none;padding:70px 24px;
+}
+.contact-inner{max-width:1120px;margin:auto;display:flex;justify-content:space-between;gap:40px;align-items:center}
+.contact h2{color:white}
+.contact p{color:#c9d8e8;max-width:590px}
+.contact-links{display:flex;gap:12px;flex-wrap:wrap}
+.contact .btn-secondary{background:transparent;color:white;border-color:#54718f}
+footer{background:#02244c;color:#9fb3c8;text-align:center;padding:22px;font-size:12px}
+@media(max-width:800px){
+ .hero-inner{grid-template-columns:1fr;padding-top:65px}
+ .nav-links{display:none}
+ .about-grid,.edu-grid,.cert-grid{grid-template-columns:1fr}
+ .job-top,.contact-inner{display:block}
+ .date{display:inline-block;margin-top:9px}
+ section{padding:65px 20px}
+ .hero-inner{padding-left:20px;padding-right:20px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">Rishika<span>.</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Salesforce Professional</div>
+      <h1>Building better<br><span>CRM experiences.</span></h1>
+      <p class="hero-copy">
+        I’m Rishika Reddy, a Salesforce Application Developer III with experience across
+        Salesforce administration, development, and business-focused CRM solutions.
+      </p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#experience">Explore my experience</a>
+        <a class="btn btn-secondary" href="mailto:rishikareddy165@gmail.com">Get in touch</a>
+      </div>
+    </div>
+
+    <aside class="profile-card">
+      <div class="avatar">RR</div>
+      <h3>Rishika Reddy</h3>
+      <p>Salesforce Application Developer III<br>United States</p>
+      <div class="badges">
+        <span class="badge">Salesforce</span>
+        <span class="badge">Administrator</span>
+        <span class="badge">Developer</span>
+        <span class="badge">CRM</span>
+      </div>
+    </aside>
+  </div>
+</header>
+
+<section id="about">
+  <div class="section-label">01 · About</div>
+  <h2>A Salesforce-focused career,<br>from administration to development.</h2>
+  <p class="section-intro">
+    My background spans Salesforce administration, development, analysis, and academic work,
+    giving me experience across both technical and business-facing environments.
+  </p>
+  <div class="about-grid">
+    <div class="card">
+      <h3>Professional focus</h3>
+      <p>Salesforce Administrator / Developer roles, with experience progressing through Salesforce-focused positions and application development.</p>
+    </div>
+    <div class="card" id="skills">
+      <h3>Core skills</h3>
+      <div class="skills">
+        <span class="skill">Salesforce</span><span class="skill">Microsoft Office</span>
+        <span class="skill">Microsoft Excel</span><span class="skill">Leadership</span>
+        <span class="skill">R</span><span class="skill">Cloud</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="section-label">02 · Experience</div>
+  <h2>Experience that grows with every role.</h2>
+  <p class="section-intro">A timeline of professional and academic experience from the résumé.</p>
+
+  <div class="timeline">
+    <article class="job">
+      <span class="dot"></span>
+      <div class="job-top"><div><h3>Salesforce Application Developer III</h3><div class="company">United Wholesale Mortgage</div></div><span class="date">Jan 2023 – Present</span></div>
+      <p>Salesforce application development role, building on prior Salesforce administration and development experience.</p>
+    </article>
+
+    <article class="job">
+      <span class="dot"></span>
+      <div class="job-top"><div><h3>Salesforce Admin/Developer</h3><div class="company">ICBD Holdings</div></div><span class="date">Jun 2020 – Jan 2023</span></div>
+      <p>Combined Salesforce administration and development responsibilities.</p>
+    </article>
+
+    <article class="job">
+      <span class="dot"></span>
+      <div class="job-top"><div><h3>Salesforce Admin/Developer</h3><div class="company">Ingenworks</div></div><span class="date">Aug 2019 – May 2020</span></div>
+      <p>Salesforce administration and development experience.</p>
+    </article>
+
+    <article class="job">
+      <span class="dot"></span>
+      <div class="job-top"><div><h3>Student Analyst</h3><div class="company">WSU Ventures</div></div><span class="date">Jun 2019 – Aug 2019</span></div>
+      <p>Student analyst experience in the United States.</p>
+    </article>
+
+    <article class="job">
+      <span class="dot"></span>
+      <div class="job-top"><div><h3>Graduate Assistant</h3><div class="company">Wichita State University</div></div><span class="date">May 2018 – Aug 2019</span></div>
+      <p>Graduate assistant experience while pursuing a master's degree.</p>
+    </article>
+
+    <article class="job">
+      <span class="dot"></span>
+      <div class="job-top"><div><h3>Salesforce Administrator</h3><div class="company">O2F INFO SOLUTIONS PRIVATE LIMITED</div></div><span class="date">Jan 2017 – Dec 2017</span></div>
+      <p>Early-career Salesforce administration experience.</p>
+    </article>
+  </div>
+</section>
+
+<section id="education">
+  <div class="section-label">03 · Education</div>
+  <h2>Technical foundation.</h2>
+  <p class="section-intro">Academic experience in computer science and information technology.</p>
+  <div class="edu-grid">
+    <div class="card edu">
+      <h3>Master's Degree, Computer Science</h3>
+      <div class="company">Wichita State University</div>
+      <div class="meta">2018 – 2019 · United States</div>
+    </div>
+    <div class="card edu">
+      <h3>Bachelor's Degree, Information Technology</h3>
+      <div class="company">Malla Reddy Engineering College</div>
+      <div class="meta">2013 – 2017</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">04 · Certifications</div>
+  <h2>Continuous learning.</h2>
+  <p class="section-intro">Certifications and learning credentials listed in the provided profile.</p>
+  <div class="cert-grid">
+    <div class="card cert"><div class="cert-icon">S</div><h3>Salesforce Certified Platform Developer I</h3></div>
+    <div class="card cert"><div class="cert-icon">C</div><h3>Copado Fundamentals I</h3></div>
+    <div class="card cert"><div class="cert-icon">A</div><h3>AWS Cloud Quest: Cloud Practitioner</h3></div>
+    <div class="card cert"><div class="cert-icon">R</div><h3>Introduction to R</h3></div>
+    <div class="card cert"><div class="cert-icon">S</div><h3>Fundamentals I SFP</h3></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div>
+      <div class="section-label">05 · Contact</div>
+      <h2>Let’s connect.</h2>
+      <p>Interested in discussing Salesforce administration, development, CRM work, or opportunities? Reach out directly.</p>
+    </div>
+    <div class="contact-links">
+      <a class="btn btn-primary" href="mailto:rishikareddy165@gmail.com">Email me</a>
+      <a class="btn btn-secondary" href="https://www.linkedin.com/in/rishika-reddy-341a1b17a" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="year"></span> Rishika Reddy · Salesforce Professional</footer>
+<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+</body>
+</html>
